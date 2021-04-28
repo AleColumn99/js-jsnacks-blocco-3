@@ -1,4 +1,4 @@
-$(document).ready(function() {
+/* $(document).ready(function() {
 
   var playerNumber = 5;
 
@@ -17,6 +17,38 @@ $(document).ready(function() {
     player.threePointPercentage = percentage;
 
     team.push(player);
+
+  }
+
+  console.log(team);
+
+}); */
+
+$(document).ready(function() {
+
+  var team = [
+    {
+      name: 'Mario'
+    },
+    {
+      name: 'Giovanni'
+    },
+    {
+      name: 'Francesco'
+    },
+    {
+      name: 'Filippo'
+    },
+    {
+      name: 'Luca'
+    }
+  ];
+
+  for (var player of team) {
+
+    player.code = generateRandomLetters(3) + generateRandomNumbers(3, 0, 9);
+    player.average = generateRandomNumbers (1, 0, 50);
+    player.percentage = generateRandomNumbers (1, 0, 100);
 
   }
 
